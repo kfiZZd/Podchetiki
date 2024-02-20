@@ -145,7 +145,7 @@
             this.label47 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -156,7 +156,17 @@
             this.txbV14 = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txbv215 = new System.Windows.Forms.TextBox();
+            this.txbt215 = new System.Windows.Forms.TextBox();
+            this.txbt115 = new System.Windows.Forms.TextBox();
+            this.txbv115 = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
             tabPage1 = new System.Windows.Forms.TabPage();
             tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -173,6 +183,7 @@
             this.tabPage12.SuspendLayout();
             this.tabPage13.SuspendLayout();
             this.tabPage14.SuspendLayout();
+            this.tabPage15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -1397,14 +1408,18 @@
             this.tabPage14.Text = "Задание 14";
             this.tabPage14.UseVisualStyleBackColor = true;
             // 
-            // tabPage15
+            // comboBox2
             // 
-            this.tabPage15.Location = new System.Drawing.Point(4, 22);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(932, 508);
-            this.tabPage15.TabIndex = 14;
-            this.tabPage15.Text = "Задание 15";
-            this.tabPage15.UseVisualStyleBackColor = true;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "мм",
+            "см",
+            "м",
+            "км"});
+            this.comboBox2.Location = new System.Drawing.Point(740, 205);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 65;
             // 
             // label50
             // 
@@ -1500,18 +1515,118 @@
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
-            // comboBox2
+            // tabPage15
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "мм",
-            "см",
-            "м",
-            "км"});
-            this.comboBox2.Location = new System.Drawing.Point(740, 205);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 65;
+            this.tabPage15.Controls.Add(this.label55);
+            this.tabPage15.Controls.Add(this.label56);
+            this.tabPage15.Controls.Add(this.label57);
+            this.tabPage15.Controls.Add(this.label58);
+            this.tabPage15.Controls.Add(this.txbv215);
+            this.tabPage15.Controls.Add(this.txbt215);
+            this.tabPage15.Controls.Add(this.txbt115);
+            this.tabPage15.Controls.Add(this.txbv115);
+            this.tabPage15.Controls.Add(this.label59);
+            this.tabPage15.Controls.Add(this.button15);
+            this.tabPage15.Location = new System.Drawing.Point(4, 22);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Size = new System.Drawing.Size(932, 508);
+            this.tabPage15.TabIndex = 14;
+            this.tabPage15.Text = "Задание 15";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label55.Location = new System.Drawing.Point(470, 237);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(22, 13);
+            this.label55.TabIndex = 74;
+            this.label55.Text = "t2:";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label56.Location = new System.Drawing.Point(252, 237);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(25, 13);
+            this.label56.TabIndex = 73;
+            this.label56.Text = "v2:";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label57.Location = new System.Drawing.Point(470, 192);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(22, 13);
+            this.label57.TabIndex = 72;
+            this.label57.Text = "t1:";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label58.Location = new System.Drawing.Point(252, 192);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(25, 13);
+            this.label58.TabIndex = 71;
+            this.label58.Text = "v1:";
+            // 
+            // txbv215
+            // 
+            this.txbv215.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txbv215.Location = new System.Drawing.Point(285, 232);
+            this.txbv215.Name = "txbv215";
+            this.txbv215.Size = new System.Drawing.Size(127, 22);
+            this.txbv215.TabIndex = 70;
+            // 
+            // txbt215
+            // 
+            this.txbt215.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txbt215.Location = new System.Drawing.Point(498, 232);
+            this.txbt215.Name = "txbt215";
+            this.txbt215.Size = new System.Drawing.Size(127, 22);
+            this.txbt215.TabIndex = 69;
+            // 
+            // txbt115
+            // 
+            this.txbt115.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txbt115.Location = new System.Drawing.Point(498, 187);
+            this.txbt115.Name = "txbt115";
+            this.txbt115.Size = new System.Drawing.Size(127, 22);
+            this.txbt115.TabIndex = 68;
+            // 
+            // txbv115
+            // 
+            this.txbv115.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txbv115.Location = new System.Drawing.Point(285, 187);
+            this.txbv115.Name = "txbv115";
+            this.txbv115.Size = new System.Drawing.Size(127, 22);
+            this.txbv115.TabIndex = 67;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label59.Location = new System.Drawing.Point(342, 122);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(197, 25);
+            this.label59.TabIndex = 65;
+            this.label59.Text = "Введите данные:";
+            // 
+            // button15
+            // 
+            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button15.Location = new System.Drawing.Point(297, 310);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(272, 88);
+            this.button15.TabIndex = 66;
+            this.button15.Text = "Подсчитать";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // Form1
             // 
@@ -1550,6 +1665,8 @@
             this.tabPage13.PerformLayout();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
+            this.tabPage15.ResumeLayout(false);
+            this.tabPage15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1684,6 +1801,16 @@
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox txbv215;
+        private System.Windows.Forms.TextBox txbt215;
+        private System.Windows.Forms.TextBox txbt115;
+        private System.Windows.Forms.TextBox txbv115;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Button button15;
     }
 }
 

@@ -218,7 +218,26 @@ namespace formaewbbb
                 double t2 = Convert.ToDouble(txbt214.Text);
                 double S = (v * t1) + (t2 * (v - v1));
                 String message = $"Путь лодки: {S} {comboBox2.Text}  ";
-                MessageBox.Show(message, "Результат";
+                MessageBox.Show(message, "Результат");
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (txbv115.Text.Length < 1 | txbv215.Text.Length < 1 | txbt115.Text.Length < 1 | txbt215.Text.Length < 1)
+            {
+                MessageBox.Show("Введите все данные!");
+            }
+            else
+            {
+                double v1 = Convert.ToDouble(txbv115.Text);
+                double v2 = Convert.ToDouble(txbv215.Text);
+                double t1 = Convert.ToDouble(txbt115.Text);
+                double t2 = Convert.ToDouble(txbt215.Text);
+                double V = v1 + v2;
+                double T = (v1 * t1 + v2 * t2) / (v1 + v2);
+                String message = $"Объём смеси: {V}  "+ $"Температура смеси: {T} ";
+                MessageBox.Show(message, "Результат");
             }
         }
     }
