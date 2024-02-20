@@ -71,7 +71,7 @@ namespace formaewbbb
             Double c1 = Math.Sqrt(Math.Pow((x11 - x31), 2) + Math.Pow((y11 - y31), 2));
             if( a1+b1<c1|a1+c1<b1|b1+c1<a1)
             {
-                MessageBox.Show("Некорректные данные!!","Результат");
+                MessageBox.Show("Некорректные занчения!", "Результат");
             }
             else
             {
@@ -79,7 +79,7 @@ namespace formaewbbb
                 Double S3 = ((x11 - x31) * (y21 - y31) - (x21 - x31) * (y11 - y31)) / 2;
                 String message = $"Площадь трегольника: {S3}  " +
                      $" Периметр треугольника: {Perimetr1}";
-                MessageBox.Show(message, "Result");
+                MessageBox.Show(message, "Результат");
             }    
         }
 
@@ -90,13 +90,13 @@ namespace formaewbbb
             Double R3 = Convert.ToDouble(txbR3.Text);
             if (R1<= 0| R2<= 0| R2<=0)
             {
-                MessageBox.Show("Incorrect data");
+                MessageBox.Show("Некорректные занчения!", "Результат");
             }
             else
             {
                 Double R0 = 1/(1/R1 + 1/R2 + 1/R3);
                 String message = $"Сопротивление соединения: {R0}";
-                MessageBox.Show(message, "Result");
+                MessageBox.Show(message, "Результат");
             }
         }
         private void button6_Click(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace formaewbbb
             Double S = a * b;
             Double d = Math.Sqrt(Math.Pow(a,2)+Math.Pow(b,2));
             String message = $"Периметр: {P}  " + $"Площадь: {S}  " + $"Длинна диагонали: {d}";
-            MessageBox.Show(message, "Result");
+            MessageBox.Show(message, "Результат");
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -117,14 +117,14 @@ namespace formaewbbb
             Double c = Convert.ToDouble(txbc7.Text);
             if (a<= 0)
             {
-                MessageBox.Show("Incorrect data");
+                MessageBox.Show("Некорректные занчения!", "Результат");
             }
             else
             {
                 Double x = -b / (2 * a);
                 Double y = a * Math.Pow(x, 2) + b * x + c;
                 String message = $"X: {x}  "+ $"Y: {y}";
-                MessageBox.Show(message, "Result");
+                MessageBox.Show(message, "Результат");
             }
         }
 
@@ -136,7 +136,7 @@ namespace formaewbbb
             double P = (A + B + C) / 2;
             double S = Math.Sqrt(P * (P - A) * (P - B) * (P - C));
             String message = $"Площадь треугольника: {S}";
-            MessageBox.Show(message, "Result");
+            MessageBox.Show(message, "Результат");
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -147,7 +147,7 @@ namespace formaewbbb
             int v = V0+a*t;
             int S = Convert.ToInt32(V0+((a*Math.Pow(t,2))/2));
             String message = $"Скорость: {v}  "+ $"Расстояние: {S}";
-            MessageBox.Show(message, "Result");
+            MessageBox.Show(message, "Результат");
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace formaewbbb
             double V = Math.PI * Math.Pow(r, 2) * h;
             double S = 2 * Math.PI * r * h;
             String message = $"Объём цилиндра: {V}  " + $"Площадь цилиндра: {S}";
-            MessageBox.Show(message, "Result");
+            MessageBox.Show(message, "Результат");
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -168,12 +168,58 @@ namespace formaewbbb
             double p = (a + b + c) / 2;
             double H = 2/a*(Math.Sqrt(p*(p-a)*(p-b)*(p-c)));
             String message = $"Объём цилиндра: {H}  ";
-            MessageBox.Show(message, "Result");
+            MessageBox.Show(message, "Результат");
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             double c = Convert.ToDouble(txbc12.Text);
+            double d = Convert.ToDouble(txbd12.Text);
+            double n = Convert.ToDouble(txbn12.Text);
+            double m = Convert.ToDouble(txbm12.Text);
+            double a = Convert.ToDouble(txba12.Text);
+            double b = Convert.ToDouble(txbb12.Text);
+            double S1 = c * d;
+            double S2 = n * m;
+            double S = 4 * a * b - S1 - S2;
+            String message = $"Площадь стен: {S}  ";
+            MessageBox.Show(message, "Результат");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            double a = Convert.ToDouble(txba13.Text);
+            double b = Convert.ToDouble(txbb13.Text);
+            double c = Convert.ToDouble(txbc13.Text);
+            double d = Convert.ToDouble(txbd13.Text);
+            if (a-b == 0 )
+            {
+                MessageBox.Show("Некорректные занчения!", "Результат");
+            }
+            else
+            {
+                double S = ((a + b) / 2) * Math.Sqrt(Math.Pow(c, 2) - ((Math.Pow((b - a), 2)) + Math.Pow(c, 2) - Math.Pow(d, 2))/(2*(b-a)));
+                String message = $"Площадь трапеции: {S} {comboBox1.Text}  ";
+                MessageBox.Show(message, "Результат");
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (txbV14.Text.Length< 1| txbV114.Text.Length < 1| txbt114.Text.Length < 1| txbt214.Text.Length < 1)
+            {
+                MessageBox.Show("Введите все данные!");
+            }
+            else
+            {
+                double v = Convert.ToDouble(txbV14.Text);
+                double v1 = Convert.ToDouble(txbV114.Text);
+                double t1 = Convert.ToDouble(txbt114.Text);
+                double t2 = Convert.ToDouble(txbt214.Text);
+                double S = (v * t1) + (t2 * (v - v1));
+                String message = $"Путь лодки: {S} {comboBox2.Text}  ";
+                MessageBox.Show(message, "Результат";
+            }
         }
     }
 }
