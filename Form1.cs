@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace formaewbbb
 {
@@ -29,7 +30,7 @@ namespace formaewbbb
                 Double V = Math.Pow(x1, 3);
                 Double S = Math.Pow(x1, 2);
                 String message = $"Объём куба: {V}; " +
-                     $" Площадь куба: {S}";
+                     $" Площадь куба: {S} {cmbS.Text}";
                 MessageBox.Show(message, "Результат");
                 
             }
@@ -45,7 +46,7 @@ namespace formaewbbb
             {
                 double x2 = Convert.ToDouble(textBox1.Text);
                 double t = Math.Sqrt((2 * x2) / (9.81523));
-                String message = $"Время падения: {t}сек";
+                String message = $"Время падения: {t} сек";
                 MessageBox.Show(message, "Результат");
             }
         }
@@ -54,7 +55,7 @@ namespace formaewbbb
         {
             double x3 = Convert.ToDouble(textBox2.Text);
             double S2 = (Math.PI/4)*Math.Pow(x3, 2);
-            String message = $"Площадь круга: {S2}";
+            String message = $"Площадь круга: {S2} {cmbS.Text}";
             MessageBox.Show(message, "Результат");
         }
 
@@ -77,8 +78,8 @@ namespace formaewbbb
             {
                 Double Perimetr1 = (a1 + b1 + c1) / 2;
                 Double S3 = ((x11 - x31) * (y21 - y31) - (x21 - x31) * (y11 - y31)) / 2;
-                String message = $"Площадь трегольника: {S3}  " +
-                     $" Периметр треугольника: {Perimetr1}";
+                String message = $"Площадь трегольника: {S3} {cmbS.Text}   " +
+                     $" Периметр треугольника: {Perimetr1} {cmbS.Text}";
                 MessageBox.Show(message, "Результат");
             }    
         }
@@ -106,7 +107,7 @@ namespace formaewbbb
             Double P = 2 * (a + b);
             Double S = a * b;
             Double d = Math.Sqrt(Math.Pow(a,2)+Math.Pow(b,2));
-            String message = $"Периметр: {P}  " + $"Площадь: {S}  " + $"Длинна диагонали: {d}";
+            String message = $"Периметр: {P} {cmbS.Text} " + $"Площадь: {S} {cmbS.Text} " + $"Длинна диагонали: {d} {cmbS.Text}";
             MessageBox.Show(message, "Результат");
         }
 
@@ -135,18 +136,18 @@ namespace formaewbbb
             double C = Convert.ToDouble(txbC8.Text);
             double P = (A + B + C) / 2;
             double S = Math.Sqrt(P * (P - A) * (P - B) * (P - C));
-            String message = $"Площадь треугольника: {S}";
+            String message = $"Площадь треугольника: {S} {cmbS.Text}";
             MessageBox.Show(message, "Результат");
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            int V0 = Convert.ToInt32(txbV0.Text);
-            int a = Convert.ToInt32(txba9.Text);
-            int t = Convert.ToInt32(txbt9.Text);
-            int v = V0+a*t;
-            int S = Convert.ToInt32(V0+((a*Math.Pow(t,2))/2));
-            String message = $"Скорость: {v}  "+ $"Расстояние: {S}";
+            double V0 = Convert.ToDouble(txbV0.Text);
+            double a = Convert.ToDouble(txba9.Text);
+            double t = Convert.ToDouble(txbt9.Text);
+            double v = V0+a*t;
+            double S = Convert.ToDouble(V0+((a*Math.Pow(t,2))/2));
+            String message = $"Скорость: {v}  "+ $"Расстояние: {S} {cmbS.Text}";
             MessageBox.Show(message, "Результат");
         }
 
@@ -156,7 +157,7 @@ namespace formaewbbb
             double h = Convert.ToDouble(txbh10.Text);
             double V = Math.PI * Math.Pow(r, 2) * h;
             double S = 2 * Math.PI * r * h;
-            String message = $"Объём цилиндра: {V}  " + $"Площадь цилиндра: {S}";
+            String message = $"Объём цилиндра: {V}  " + $"Площадь цилиндра: {S} {cmbS.Text}";
             MessageBox.Show(message, "Результат");
         }
 
@@ -182,7 +183,7 @@ namespace formaewbbb
             double S1 = c * d;
             double S2 = n * m;
             double S = 4 * a * b - S1 - S2;
-            String message = $"Площадь стен: {S}  ";
+            String message = $"Площадь стен: {S} {cmbS.Text} ";
             MessageBox.Show(message, "Результат");
         }
 
@@ -199,7 +200,7 @@ namespace formaewbbb
             else
             {
                 double S = ((a + b) / 2) * Math.Sqrt(Math.Pow(c, 2) - ((Math.Pow((b - a), 2)) + Math.Pow(c, 2) - Math.Pow(d, 2))/(2*(b-a)));
-                String message = $"Площадь трапеции: {S} {comboBox1.Text}  ";
+                String message = $"Площадь трапеции: {S} {cmbS.Text}  ";
                 MessageBox.Show(message, "Результат");
             }
         }
@@ -217,7 +218,7 @@ namespace formaewbbb
                 double t1 = Convert.ToDouble(txbt114.Text);
                 double t2 = Convert.ToDouble(txbt214.Text);
                 double S = (v * t1) + (t2 * (v - v1));
-                String message = $"Путь лодки: {S} {comboBox2.Text}  ";
+                String message = $"Путь лодки: {S} {cmbS.Text}  ";
                 MessageBox.Show(message, "Результат");
             }
         }
