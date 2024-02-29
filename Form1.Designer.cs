@@ -206,9 +206,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(311, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 25);
+            this.label2.Size = new System.Drawing.Size(313, 25);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Введите Длинну ребра куба:";
+            this.label2.Text = "Введите Длину ребра куба:";
             // 
             // button1
             // 
@@ -315,9 +315,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(307, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(328, 25);
+            this.label3.Size = new System.Drawing.Size(315, 25);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Введите длинну окружности:";
+            this.label3.Text = "Введите длину окружности:";
             // 
             // button3
             // 
@@ -722,7 +722,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(318, 140);
+            this.label21.Location = new System.Drawing.Point(307, 140);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(369, 25);
             this.label21.TabIndex = 30;
